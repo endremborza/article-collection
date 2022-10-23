@@ -1,1 +1,1 @@
-aswan[remote]>=0.3.0
+aswan[remote]>=0.3.1
