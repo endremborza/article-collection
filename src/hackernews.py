@@ -25,6 +25,4 @@ class RegTop(aswan.RequestSoupHandler):
 
 
 if __name__ == "__main__":
-    aswan.run_simple_project(
-        {RegTop: [main_url], GiveUp: []}, name="hackernews", remote=True
-    )
+    aswan.run_simple_project({RegTop: [main_url]}, name="hackernews", remote=True)
