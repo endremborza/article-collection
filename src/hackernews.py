@@ -1,4 +1,5 @@
 from typing import Union
+
 import aswan
 from bs4 import BeautifulSoup
 
@@ -6,6 +7,8 @@ main_url = "https://news.ycombinator.com/"
 
 
 class GiveUp(aswan.RequestHandler):
+    process_indefinitely: bool = True
+
     def is_session_broken(self, result: Union[int, Exception]):
         if isinstance(result, int):
             return result >= 500
