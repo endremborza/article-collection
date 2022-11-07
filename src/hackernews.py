@@ -9,9 +9,7 @@ main_url = "https://news.ycombinator.com/"
 class GiveUp(aswan.RequestHandler):
     process_indefinitely: bool = True
 
-    def is_session_broken(self, result: Union[int, Exception]):
-        if isinstance(result, int):
-            return result >= 500
+    def is_session_broken(self, _: Union[int, Exception]):
         return False
 
 
